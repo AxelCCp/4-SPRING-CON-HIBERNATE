@@ -17,13 +17,13 @@ public class ConsultaClientes {
 		
 		try {
 			
-			//COMENZAR SESIÓN
+			//COMENZAR SESIÃ“N
 			miSession.beginTransaction();
 			
 			//CONSULTA DE CLIENTES
-			//List<Clientes> losClientes: LA INFORMACIÓN DE LA QUERY SE ALMACENA EN ESTA LISTA.
+			//List<Clientes> losClientes: LA INFORMACIÃ“N DE LA QUERY SE ALMACENA EN ESTA LISTA.
 			//createQuery(): REALIZAMOS LA CONSULTA.
-			//getResultList():PARA OBTENER LA INFORMACIÓN QUE SE CONSIGUE CON createQuery(). 
+			//getResultList():PARA OBTENER LA INFORMACIÃ“N QUE SE CONSIGUE CON createQuery(). 
 			List<Clientes> losClientes = miSession.createQuery("from Clientes").getResultList();
 			//MOSTRAR CLIENTES
 			for(Clientes unCliente : losClientes) {
@@ -34,8 +34,8 @@ public class ConsultaClientes {
 			
 			//CONSULTA...DAME LOS ANN
 			//cl: ES UN ALIAS PARA LUEGO USAR where.
-			//apellidos: (con minúscula) es la propiedad de la clase Clientes 
-			losClientes = miSession.createQuery("from Clientes cl where cl.apellidos='Ann'").getResultList();
+			//apellidos: (con minÃºscula) es la propiedad de la clase Clientes 
+			losClientes = miSession.createQuery("from Clientes cl where cl.apellidos='YYYYY'").getResultList();
 			for(Clientes unCliente : losClientes) {
 				System.out.println(unCliente);
 			}
@@ -43,8 +43,8 @@ public class ConsultaClientes {
 			
 			
 			
-			//CONSULTA...DAME LOS QUE VIVEN EN "xxxxx n°2345" Ó SE APELLIDAN "Ann"
-			losClientes = miSession.createQuery("from Clientes cl where cl.apellidos='Ann' or cl.direccion='xxxxx n°2345'").getResultList();
+			//CONSULTA...DAME LOS QUE VIVEN EN "xxxxx nÂ°2345" Ã“ SE APELLIDAN "Ann"
+			losClientes = miSession.createQuery("from Clientes cl where cl.apellidos='YYYYY' or cl.direccion='xxxxx nÂ°2345'").getResultList();
 			
 			for(Clientes unCliente : losClientes) {
 				System.out.println(unCliente);

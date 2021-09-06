@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 public class ActualizaClientes {
 	public static void main(String []args) {
 
-		//CREAMOS OBJ SESSIONFACTORY PARA QUE LEA EL ARCHIVO DE CONFIGURACI”N Y SEA CAPAZ DE CONSTRUIR UN SESSIONFACTORY. 
+		//CREAMOS OBJ SESSIONFACTORY PARA QUE LEA EL ARCHIVO DE CONFIGURACI√ìN Y SEA CAPAZ DE CONSTRUIR UN SESSIONFACTORY. 
 		//CONFIGURE(): PARA LEER ARCHIVO DE CONFIGURACION.(INDICAMOS EL ARCHIVO DE CONFIG QUE LEA)
 		//addAnnotatedClass():INDICAMOS LA CLASE CON LA QUE VAMOS A TRABAJAR.
 		//buildSessionFactory():INDICAMOS QUE COSNTRUYA ESTE SESSION FACTORY.
@@ -22,16 +22,16 @@ public class ActualizaClientes {
 		
 		try {
 			
-			//int clienteId: ESTA VARIABLE DETERMINAR¡ EL CLIENTE QUE SE MODIFICAR¡.
-			//beginTransaction(): EJECUTAR TRANSACCI”N.
-			//getTransaction().commit(): RESCATAMOS LA TRANSACCI”N QUE HEMOS HECHO, Y CON COMMIT() FIJAMOS LA OPERACI”N.  
-			//Clientes miCliente: CREAMOS UN OBJ DE TIPO CLIENTES, PARA ALMACENAR LA INFORMACI”N COMPLETA, SEG⁄N "clienteId".
-			//MODIFICAMOS LA INFORMACI”N SEG⁄N EL SETTER CORRESPONDIENTE. 
+			//int clienteId: ESTA VARIABLE DETERMINAR√Å EL CLIENTE QUE SE MODIFICAR√Å.
+			//beginTransaction(): EJECUTAR TRANSACCI√ìN.
+			//getTransaction().commit(): RESCATAMOS LA TRANSACCI√ìN QUE HEMOS HECHO, Y CON COMMIT() FIJAMOS LA OPERACI√ìN.  
+			//Clientes miCliente: CREAMOS UN OBJ DE TIPO CLIENTES, PARA ALMACENAR LA INFORMACI√ìN COMPLETA, SEG√öN "clienteId".
+			//MODIFICAMOS LA INFORMACI√ìN SEG√öN EL SETTER CORRESPONDIENTE. 
 			int clienteId=1;
 			miSession.beginTransaction();
 			Clientes miCliente = miSession.get(Clientes.class, clienteId);
-			miCliente.setNombre("Tasha");
-			miCliente.setApellidos("Reign");
+			miCliente.setNombre("NNNN");
+			miCliente.setApellidos("RRRRR");
 			miSession.getTransaction().commit();
 			System.out.println("REGISTRO *** ACTUALIZADO *** CORRECTAMENTE");
 			
